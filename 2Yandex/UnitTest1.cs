@@ -32,7 +32,7 @@ namespace _2Yandex
             IWebElement loginButtonThird = driver.FindElement(By.Id("passp:sign-in"));
             loginButtonThird.Click();
             Thread.Sleep(1000);
-
+            
             var accountName = "m";
             var loginElement = driver.FindElement(By.ClassName("username__first-letter")).Text;
             Assert.AreEqual(accountName, loginElement);
