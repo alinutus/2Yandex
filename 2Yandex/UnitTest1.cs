@@ -33,6 +33,7 @@ namespace _2Yandex
             loginButtonThird.Click();
             Thread.Sleep(1000);
 
+
             var accountName = "m";
             var loginElement = driver.FindElement(By.ClassName("username__first-letter")).Text;
             Assert.AreEqual(accountName, loginElement);
