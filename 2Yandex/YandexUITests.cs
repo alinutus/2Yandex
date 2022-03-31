@@ -2,10 +2,14 @@ using NUnit.Framework;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using Allure.Commons;
 
 namespace _2Yandex
 {
+    [TestFixture(Author = "Alina", Description = "Yandex")]
+    [AllureNUnit]
     public class YandexUITests
     {
         private WebDriver Driver;
@@ -17,6 +21,10 @@ namespace _2Yandex
         }
 
         [Test]
+        [Description("Simple test with allure tags")]
+        [AllureOwner("Author")]
+        [AllureTag("Category")]
+        [AllureSeverity(SeverityLevel.critical)]
         public void LogInTest()
         {
             Driver.Url = "https://yandex.by";
